@@ -1,0 +1,10 @@
+NFS_CORE_PARAM {
+  NFS_Port = 2049;
+  Bind_addr = 10.1.2.3;
+}
+EXPORT {
+  Export_Id = 7;
+  Path = /srv/data;
+  Pseudo = /data;
+  CLIENT { Clients = 10.0.0.0/8; Access_Type = RW; }
+}

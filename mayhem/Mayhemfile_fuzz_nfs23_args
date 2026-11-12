@@ -1,0 +1,9 @@
+project: savantenvs/nfs-ganesha
+target: fuzz_nfs23_args
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_nfs23_args/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nfs23_args
+    libfuzzer: true
+    timeout: 5

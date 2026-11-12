@@ -1,0 +1,9 @@
+project: savantenvs/nfs-ganesha
+target: fuzz_nfs4_compound
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_nfs4_compound/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nfs4_compound
+    libfuzzer: true
+    timeout: 5

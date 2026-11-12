@@ -1,0 +1,10 @@
+project: savantenvs/nfs-ganesha
+target: fuzz_config_parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_config_parse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_config_parse
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/fuzz_config_parse/fuzz_config_parse.dict
